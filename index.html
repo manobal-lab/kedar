@@ -1,13 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>KMBH Project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fullscreen YouTube Video</title>
+
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container {
+    position: fixed;
+    inset: 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+</style>
+
 </head>
 <body>
 
-<!--h2>My YouTube Video</h2-->
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OWPgHVe6bWU?si=NLxc6-JDq9G-ih_m" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<div class="video-container">
+    <iframe
+        src="https://www.youtube.com/embed/OWPgHVe6bWU?autoplay=1&rel=0&modestbranding=1&playsinline=1"
+        title="YouTube video player"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+        allowfullscreen>
+    </iframe>
+</div>
 
 </body>
 </html>
